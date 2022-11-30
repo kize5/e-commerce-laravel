@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ca5b032-fe7a-4a16-b353-f6066e4fc251" name="Changes" comment="" />
+    <list default="true" id="2ca5b032-fe7a-4a16-b353-f6066e4fc251" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/order_product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/user_adress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_11_29_105332_create_order_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_11_29_105332_create_order_has_products_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +210,7 @@
       <workItem from="1669363561850" duration="18946000" />
       <workItem from="1669622644280" duration="16981000" />
       <workItem from="1669710701177" duration="16597000" />
-      <workItem from="1669795993615" duration="1102000" />
+      <workItem from="1669795993615" duration="6161000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Start BDD Branch&quot;&#10;&#10;This reverts commit b7ddf9fd">
       <created>1669719120130</created>
