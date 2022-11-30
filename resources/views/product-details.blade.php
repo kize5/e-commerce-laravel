@@ -5,7 +5,7 @@
         <div class="maindiv-id">
             <div class="maindiv-top1">
                 <div class="maindiv-id1">
-                    <img class="img-id" src="../storage/image/moon-id.jpg" alt="moon">
+                    <img class="img-id" src="{{$product->image}}" alt="moon">
                 </div>
                 <div class="maindiv-id2">
                     <h1>{{$product->name}}</h1>

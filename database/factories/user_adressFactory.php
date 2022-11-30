@@ -20,6 +20,7 @@ class user_adressFactory extends Factory
             'city' => fake()->city(),
             'postal_code' => fake()->postcode(),
             'country' => fake()->country(),
+            'id_users' => fake()->unique()->numberBetween(1,10),
         ];
     }
 }

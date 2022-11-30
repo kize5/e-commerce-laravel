@@ -343,8 +343,8 @@ class ComposerStaticInit6e12af45eca03c2347c73d6febbfc37c
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -2524,6 +2524,7 @@ class ComposerStaticInit6e12af45eca03c2347c73d6febbfc37c
         'Illuminate\\Routing\\Middleware\\ThrottleRequestsWithRedis' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequestsWithRedis.php',
         'Illuminate\\Routing\\Middleware\\ValidateSignature' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Middleware/ValidateSignature.php',
         'Illuminate\\Routing\\PendingResourceRegistration' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/PendingResourceRegistration.php',
+        'Illuminate\\Routing\\PendingSingletonResourceRegistration' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/PendingSingletonResourceRegistration.php',
         'Illuminate\\Routing\\Pipeline' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Pipeline.php',
         'Illuminate\\Routing\\RedirectController' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/RedirectController.php',
         'Illuminate\\Routing\\Redirector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Redirector.php',
@@ -2620,6 +2621,7 @@ class ComposerStaticInit6e12af45eca03c2347c73d6febbfc37c
         'Illuminate\\Support\\ItemNotFoundException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/ItemNotFoundException.php',
         'Illuminate\\Support\\Js' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Js.php',
         'Illuminate\\Support\\LazyCollection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/LazyCollection.php',
+        'Illuminate\\Support\\Lottery' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Lottery.php',
         'Illuminate\\Support\\Manager' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/Manager.php',
         'Illuminate\\Support\\MessageBag' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/MessageBag.php',
         'Illuminate\\Support\\MultipleInstanceManager' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/MultipleInstanceManager.php',
