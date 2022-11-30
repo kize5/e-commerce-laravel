@@ -36,6 +36,7 @@
     <div class="cancel_create">
     <a href="{{route('backoffice.dashboard.dashboard')}}" >
         <button class="myButton">Annuler</button></a>
+
     </div>
 </div>
 @endsection

@@ -18,4 +18,9 @@ class category extends Model
 //    public function categoryModels () {
 //        return $this->hasMany(category::class);
 //    }
+
+    public function products()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

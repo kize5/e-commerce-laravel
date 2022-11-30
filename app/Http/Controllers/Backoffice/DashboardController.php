@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Backoffice;
 
+use App\Models\user;
+
 class DashboardController extends BackofficeController
 {
 
@@ -9,5 +11,6 @@ class DashboardController extends BackofficeController
     {
         return view ("back/dashboard");
     }
+
 
 }

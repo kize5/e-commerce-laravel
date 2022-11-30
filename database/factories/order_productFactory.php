@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Database\Seeders\order_productsTableSeeder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,5 +20,10 @@ class order_productFactory extends Factory
         return [
             'quantity' => fake()->numberBetween(1, 10),
         ];
+    }
+
+    public function run()
+    {
+        return $this->call([order_productsTableSeeder::class]);
     }
 }

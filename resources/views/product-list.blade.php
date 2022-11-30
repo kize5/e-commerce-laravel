@@ -4,20 +4,25 @@
     <div id="carouselPromo" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img id="1" class="d-block w-100" src="storage/image/Flyer1.png" alt="First slide">
+                <img id="1" class="d-block w-100" src="storage/image/Flyer1.png"
+                     alt="First slide">
             </div>
             <div class="carousel-item">
-                <img id="2" class="d-block w-100" src="storage/image/Flyer2.png" alt="Second slide">
+                <img id="2" class="d-block w-100" src="storage/image/Flyer2.png"
+                     alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img id="3" class="d-block w-100" src="storage/image/Flyer3.png" alt="Third slide">
+                <img id="3" class="d-block w-100" src="storage/image/Flyer3.png"
+                     alt="Third slide">
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselPromo" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselPromo" role="button"
+           data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselPromo" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselPromo" role="button"
+           data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -99,6 +104,7 @@
             <a href="{{ url ('/product/6') }}">
                 <button class="myButton">109,99$</button>
             </a>
+
         </div>
     </div>
 

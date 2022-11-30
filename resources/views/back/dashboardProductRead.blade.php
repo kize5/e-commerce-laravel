@@ -6,7 +6,8 @@
 
 <div class="dash_container_button">
     {{$products->links()}}
-    <table class="table table-dark table_read">
+    <table class="table table-dark table_read"
+    style="display:flex; flex-direction:column";>
         <thead>
         <tr>
             <th scope="col">ID</th>
