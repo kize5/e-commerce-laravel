@@ -21,6 +21,8 @@ return new class extends Migration
             $table->unsignedMediumInteger('quantity');
             $table->text('description');
             $table->string('image');
+            $table->unsignedBigInteger('catId');
+            $table->foreign('catId')->references('id')->on('categories');
         });
     }
 

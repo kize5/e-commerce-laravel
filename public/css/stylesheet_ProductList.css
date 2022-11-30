@@ -11,26 +11,16 @@ body{
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     backdrop-filter: blur(2px);
 }
-#Voyage1{
+#VoyageItem{
     margin-top: 1%;
-    margin-left: 12%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     backdrop-filter: blur(2px);
 }
-#Voyage2{
-    margin-top: 1%;
-    backdrop-filter: blur(2px);
-}
-#Voyage3{
-    margin-top: 1%;
-    backdrop-filter: blur(2px);
-}
-#Voyage4{
-    margin-top: 1%;
-    backdrop-filter: blur(2px);
-}
+
 
 #PhotoLA{
     max-width: 50%;

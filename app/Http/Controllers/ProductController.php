@@ -9,7 +9,21 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function all_product(){
-        return view("product-list",['css' => '../css/stylesheet_ProductList.css', 'title' => 'Product List']);
+
+        $products1 = Product::where('catId',1)
+            ->orderBy('name')
+            ->take(10)
+            ->get();
+        $products2 = Product::where('catId',2)
+            ->orderBy('name')
+            ->take(10)
+            ->get();
+        return view("product-list",
+                ['css' => '../css/stylesheet_ProductList.css',
+                'title' => 'Product List',
+                'products1'=>$products1,
+            'products2'=>$products2]
+    );
     }
 
     public function id_produit($id)
