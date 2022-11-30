@@ -15,10 +15,12 @@ class TestController extends Controller
 
         $adresses = user_adress::all();
         $categories = category::all();
+        $products = Product::all();
         return view('test', [
             'users'=>$users,
             'adresses'=>$adresses,
             'categories'=>$categories,
+            'products'=>$products,
             'css'=>'../css/main.css',
             'title'=>'test'
         ]);

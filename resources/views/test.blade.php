@@ -2,12 +2,22 @@
 @extends('components.layoutFront')
 @section('content')
 
+    {{---------------- many to one --------------}}
+
+    @foreach($products as $product)
+        {{$product->name}} = {{$product->category->name}} //
+    @endforeach
+
+    <br>
+    <p>-----------------------------</p>
+    <br>
+
 {{---------------- One to many --------------}}
 
     @foreach($categories as $category)
-        <h2>{{$category->id}}</h2>
+        <h2>Catégorie{{$category->id}}</h2>
         @foreach($category->product as $product)
-            {{ $product->name }} <br>
+          {{ $product->name}} -
         @endforeach
     @endforeach
 
