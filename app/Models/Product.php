@@ -18,4 +18,8 @@ class Product extends Model
         return $this->belongsTo(category::class,'id_category');
     }
 
+    public function Adef () {
+
+}
+
 }

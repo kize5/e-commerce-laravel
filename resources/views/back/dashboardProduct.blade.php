@@ -21,6 +21,7 @@
         <a href="{{ action([ProductController::class, 'read']) }}">
             <button class="myButton addbtn">Afficher détails produits</button>
         </a>
+        {{$products->links()}}
         <div class="dash_container_button">
             <table class="table table-dark">
                 <thead>

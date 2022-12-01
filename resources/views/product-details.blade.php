@@ -9,7 +9,7 @@
                 </div>
                 <div class="maindiv-id2">
                     <h1>{{$product->name}}</h1>
-                    <form class="form_id" method="post" action="/">
+                    <form class="form_id" method="get" action="{{route('panier')}}">
                         <p class="text_id_form"><strong>Prix : {{$product->price}} </strong></p> <br>
                         <p class="text_di_form"> TVA incluse (si applicable), plus frais de livraison</p> <br>
                         <input type="hidden" name="id" value="{{$product->id}}"/>

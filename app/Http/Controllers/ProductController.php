@@ -9,7 +9,11 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function all_product(){
-        return view("product-list",['css' => '../css/stylesheet_ProductList.css', 'title' => 'Product List']);
+        $products = DB::select('SELECT * FROM products');
+        return view("product-list", [
+            'css' => '../css/stylesheet_ProductList.css',
+            'title' => 'Product List',
+            'products'=>$products]);
     }
 
     public function id_produit($id)
