@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
     public function all_product(){
-
-        $products = Product::query()->whereIn('id', [2,3,4])->get();
-
-        return view("product-list",['css' => '../css/stylesheet_ProductList.css', 'title' => 'Product List']);
+        $products = DB::select('SELECT * FROM products');
+        return view("product-list", [
+            'css' => '../css/stylesheet_ProductList.css',
+            'title' => 'Product List',
+            'products'=>$products]);
     }
 
     public function id_produit($id)
@@ -36,6 +36,4 @@ class ProductController extends Controller
             'css' => '../css/product-details.css'
         ]);
     }
-
-
 }

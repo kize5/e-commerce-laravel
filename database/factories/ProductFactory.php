@@ -26,6 +26,7 @@ class ProductFactory extends Factory
             'quantity' => fake()->numberBetween(0, 50),
             'description' => fake()->realTextBetween(50, 150, 2),
             'image' => fake()->imageUrl(360, 360, 'animals', true, 'dogs', true),
+            'id_category' =>rand(1,2),
         ];
     }
 }

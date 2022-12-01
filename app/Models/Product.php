@@ -10,7 +10,17 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+//    protected $guarded = [];
+
+//    protected $fillable = ['id_category'];
+
+    public function category () {
+        return $this->belongsTo(category::class,'id_category');
+    }
+
+    public function Adef () {
+
+}
 
     public function categories()
     {

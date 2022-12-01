@@ -21,8 +21,9 @@ return new class extends Migration
             $table->unsignedMediumInteger('quantity');
             $table->text('description');
             $table->string('image');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            //  $table->unsignedBigInteger('id_category');
+//            $table->foreign('id_category')->references('id')->on('category');
+            $table->foreignId('id_category')->nullable()->constrained('categories');
         });
     }
 
