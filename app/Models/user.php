@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class user extends Model
 {
     use HasFactory;
+
+    public function user_adress ()
+    {
+        return $this->hasOne(user_adress::class, 'id_users', 'id');
+    }
 }

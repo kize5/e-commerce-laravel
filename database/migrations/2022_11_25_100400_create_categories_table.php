@@ -20,8 +20,7 @@ return new class extends Migration
 
 //            $table->unsignedBigInteger('id_products');
 //            $table->foreign('id_products')->references('id')->on('products');
-//
-            $table->foreignId('id_products')->nullable()->constrained('products');
+
         });
     }
 
