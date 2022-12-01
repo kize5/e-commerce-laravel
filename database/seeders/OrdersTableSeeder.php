@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\order_product;
+use App\Models\order;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class order_productsTableSeeder extends Seeder
+class OrdersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +15,6 @@ class order_productsTableSeeder extends Seeder
      */
     public function run()
     {
-        order_product::factory()->count(10)->create();
-
+        order::factory()->count(10)->create();
     }
 }
-
-;

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory; // relié au factory
 
 //    protected $guarded = [];
 
@@ -18,12 +18,9 @@ class Product extends Model
         return $this->belongsTo(category::class,'id_category');
     }
 
-    public function Adef () {
-
+    public function order () {
+    return $this->belongsToMany(order::class, 'orders', 'order_id','product_id');
 }
 
-    public function categories()
-    {
-        return $this->hasMany(category::class);
-    }
+
 }

@@ -9,7 +9,9 @@ class order extends Model
 {
     use HasFactory;
 
-    public function adef () {
-        return $this->belongsToMany(Product::class, 'order_products', 'id_orders', 'id_products');
+    public function product () {
+        return $this->belongsToMany(Product::class, 'order_products', 'order_id', 'product_id');
     }
+
+
 }
