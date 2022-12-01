@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function all_product(){
+
+        $products = Product::query()->whereIn('id', [2,3,4])->get();
+
         return view("product-list",['css' => '../css/stylesheet_ProductList.css', 'title' => 'Product List']);
     }
 
