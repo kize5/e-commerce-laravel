@@ -18,8 +18,8 @@ class Product extends Model
         return $this->belongsTo(category::class,'id_category');
     }
 
-    public function Adef () {
-
+    public function order () {
+        return $this->belongsToMany(order::class, 'order_products', 'id_products', 'id_orders');
 }
 
 }
