@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function all_product(){
-        $products = DB::select('SELECT * FROM products');
+        $products = Product::query();
         return view("product-list", [
             'css' => '../css/stylesheet_ProductList.css',
             'title' => 'Product List',
@@ -18,7 +18,6 @@ class ProductController extends Controller
 
     public function id_produit($id)
     {
-
 //        $prodname = DB::table('product')->where('IDPRODUCT' , $id)->value('NAME');
 //        $prodprice = DB::table('product')->where('IDPRODUCT' , $id)->value('PRICEPRODUCT');
 //        $proddesc = DB::table('product')->where('IDPRODUCT' , $id)->value('DESCRIPTION');
@@ -28,8 +27,8 @@ class ProductController extends Controller
             ->where(['id' => $id])
             ->firstOrFail();
 
-//        dd($product);
         $title = "Mon produit " . $id;
+
         return view("product-details", [
             'product' => $product,
             'title'=> $title,

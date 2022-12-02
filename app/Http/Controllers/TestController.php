@@ -13,8 +13,7 @@ class TestController extends Controller
 {
     public function test () {
         $users = user::all();
-
-        $adresses = user_adress::all();
+        $adresses = user_adress::query()->limit(10)->get();
         $categories = category::all();
         $products = Product::all();
         $orders = order::all();
