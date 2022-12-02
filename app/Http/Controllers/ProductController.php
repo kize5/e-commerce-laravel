@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function all_product(){
-        $products = DB::select('SELECT * FROM products');
+        $products = Product::query();
         return view("product-list", [
             'css' => '../css/stylesheet_ProductList.css',
             'title' => 'Product List',
