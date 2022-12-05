@@ -1,64 +1,83 @@
+
 @extends('components.layoutFront')
 @section('content')
 
-    {{---------------- many to one --------------}}
-    <div style=" display:flex; flex-direction: column; align-items: center;">
-        @foreach($products as $product)
-            {{$product->name}} = {{$product->category->name}} //
+{{--    -------------- one to one with if ------------ <br>--}}
+
+{{--    @foreach($users as $user)--}}
+{{--       // {{$user->first_name}}  {{$user->last_name}} : <br>--}}
+{{--       @if(isset($user->order->id) )--}}
+{{--           @foreach($user->order as $order)--}}
+{{--               {{dd($user->order->id)}}--}}
+{{--               @if(($user->id = $user->order->id))--}}
+{{--                   {{$user->order->id}} <br>--}}
+{{--               @endif--}}
+{{--           @endforeach--}}
+{{--       @endif--}}
+{{--    @endforeach--}}
+
+    <br>
+    -------------- many to many ------------ <br>
+    <br>
+    @foreach ($products as $product)
+        @foreach($product->order as $order)
+            {{$order->id_users}}
         @endforeach
-    </div>
+    @endforeach
 
-    <hr style="border: 3px solid cornflowerblue">
+    -------------- many to many ------------ <br>
 
-    {{--    <br>--}}
-    {{--    <p>-----------------------------</p>--}}
-    {{--    <br>--}}
+    @foreach($orders as $order)
+        id commande : {{$order->id}} //  id_user {{$order->id_users}}
 
+{{--         @if (isset())--}}
+        @foreach($order->product as $product)
 
-    {{---------------- One to many --------------}}
-    <div style=" display:flex; flex-direction: column; align-items: center;">
-        @foreach($categories as $category)
-            <h2 style="color: red">Catégorie : {{$category->id}}</h2>
-            @foreach($category->product as $product)
-                {{ $product->name}}
-            @endforeach
+            nom du produit{{$product->name}} <br>
         @endforeach
-    </div>
-    <hr style="border: 3px solid cornflowerblue">
+    @endforeach
 
-    {{--    <br>--}}
-    {{--    <p>-----------------------------</p>--}}
-    {{--    <br>--}}
+    <br>
+    <p>-----------------------------</p>
+    <br>
 
-    {{------------- One to one relationship ----------------}}
-    <div style=" display:flex; flex-direction: column; align-items: center;">
-        @foreach($users as $user)
-            <p>{{$user->first_name}} : {{$user->email}}: {{ $user->user_adress->city}}</p>
+    -------------- many to one ------------ <br>
+
+    @foreach($products as $product)
+        {{$product->name}} = {{$product->category->name}} //
+    @endforeach
+
+    <br>
+    <p>-----------------------------</p>
+    <br>
+
+-------------- One to many ------------ <br>
+
+    @foreach($categories as $category)
+        <h2>Catégorie : {{$category->id}}</h2>
+        @foreach($category->product as $product)
+          {{ $product->name}} -
         @endforeach
-    </div>
-    <hr style="border: 3px solid cornflowerblue">
+    @endforeach
 
+    <br>
+    <p>-----------------------------</p>
+    <br>
 
-    {{------------- inversed One to one relationship ----------------}}
-    <div style=" display:flex; flex-direction: column; align-items: center;">
-        @foreach($adresses as $adress)
-            <p>{{$adress->city}} :
-                    {{$adress->user->first_name}}</p>
+----------- One to one relationship -------------- <br>
 
-        @endforeach
-    </div>
+    @foreach($users as $user)
+        <p>{{$user->first_name}} : {{$user->email}} : {{ $user->user_adress->city}}</p>
+    @endforeach
 
+    <br>
+<p>-----------------------------</p>
+    <br>
 
-    <hr style="border: 3px solid cornflowerblue">
+    ----------- inversed One to one relationship -------------- <br>
 
+    @foreach($adresses as $adress)
+        <p>{{$adress->city}} : {{$adress->user->first_name}}</p>
+    @endforeach
 
-    {{------------- relation many to many ----------------}}
-    <div style=" display:flex; flex-direction: column; align-items: center;">
-        @foreach($orders as $order)
-            <p>{{$order->id}}</p>
-            @foreach($order->product as $product)
-                {{$product->name}}
-            @endforeach
-        @endforeach
-    </div>
 @endsection

@@ -27,6 +27,7 @@ class ProductController extends Controller
             ->where(['id' => $id])
             ->firstOrFail();
 
+//        dd($product);
         $title = "Mon produit " . $id;
 
         return view("product-details", [

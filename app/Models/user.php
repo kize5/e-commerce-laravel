@@ -9,12 +9,13 @@ class user extends Model
 {
     use HasFactory;
 
-    public function user_adress(): \Illuminate\Database\Eloquent\Relations\HasOne
+    public function order ()
     {
-        return $this->hasOne(user_adress::class, 'id_users', 'id');
+        return $this->hasOne(order::class, 'id_users', 'id');
     }
 
-    public function order(){
-        return $this->belongsTo(order::class);
+    public function user_adress ()
+    {
+        return $this->hasOne(user_adress::class, 'id_users', 'id');
     }
 }

@@ -1,11 +1,12 @@
 <?php
 
-namespace {{ namespace }};
+namespace Database\Seeders;
 
+use App\Models\order;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class {{ class }} extends Seeder
+class ordersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,6 @@ class {{ class }} extends Seeder
      */
     public function run()
     {
-        //
+        order::factory()->count(10)->create();
     }
 }

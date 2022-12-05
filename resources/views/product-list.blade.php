@@ -42,33 +42,33 @@
 
     <div class="Voyage">
         @foreach($products as $product)
-            <div id="Voyage1">
-                <img src="https://imgs.search.brave.com/fyqk-Ycyx0_SxQHAtKdJr9MVxaUvklRSkz-kDLffwaE/rs:fit:660:803:1/g:ce/aHR0cHM6Ly92b3lh/Z2Utb25pcmlxdWUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE5LzEyLzAyY2Q3/ZDMyLmpwZw"
-                     id="PhotoParis" alt="Photo Paris">
-                <h2>{{$product->name}}</h2>
-                <h3>{{$product->description}}</h3>
-                <a href="{{ route('id_product', ['id' => $product->id]) }}">
-                    <button class="myButton">{{$product->price}}$</button>
-                </a>
-            </div>
-        @endforeach
-    </div>
-
-
-    <h1 id="Vr">VR</h1>
-    <div class="VR">
-        <div id="VR1">
-            @foreach($products as $product)
+            @if ($product->id_category === 1)
                 <div id="Voyage1">
-                    <img src="https://imgs.search.brave.com/fyqk-Ycyx0_SxQHAtKdJr9MVxaUvklRSkz-kDLffwaE/rs:fit:660:803:1/g:ce/aHR0cHM6Ly92b3lh/Z2Utb25pcmlxdWUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE5LzEyLzAyY2Q3/ZDMyLmpwZw"
-                         id="PhotoParis" alt="Photo Paris">
+                    <img src="{{$product -> image}}" id="PhotoParis" alt="Photo Paris">
                     <h2>{{$product->name}}</h2>
                     <h3>{{$product->description}}</h3>
                     <a href="{{ route('id_product', ['id' => $product->id]) }}">
                         <button class="myButton">{{$product->price}}$</button>
                     </a>
                 </div>
-            @endforeach
-        </div>
+            @endif
+        @endforeach
+    </div>
+
+
+    <h1 id="Vr">VR</h1>
+    <div class="VR">
+        @foreach($products as $product )
+            @if($product->id_category== 2)
+                <div  id="Voyage1">
+                    <img src="{{$product -> image}}" id="PhotoParis" alt="Photo Paris">
+                    <h2>{{$product->name}}</h2>
+                    <h3>{{$product->description}}</h3>
+                    <a href="{{ route('id_product', ['id' => $product->id]) }}">
+                        <button class="myButton">{{$product->price}}$</button>
+                    </a>
+                </div>
+            @endif
+        @endforeach
     </div>
 @endsection

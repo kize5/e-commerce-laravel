@@ -13,9 +13,11 @@ class TestController extends Controller
 {
     public function test () {
         $users = user::all();
-        $adresses = user_adress::query()->limit(10)->get();
+        $adresses = user_adress::all();
+
         $categories = category::all();
         $products = Product::all();
+
         $orders = order::all();
 
         return view('test', [
@@ -23,9 +25,9 @@ class TestController extends Controller
             'adresses'=>$adresses,
             'categories'=>$categories,
             'products'=>$products,
-            'css'=>'../css/main.css',
-            'title'=>'test',
             'orders'=>$orders,
+            'css'=>'../css/main.css',
+            'title'=>'test'
         ]);
     }
 }

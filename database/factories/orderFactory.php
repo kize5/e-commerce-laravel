@@ -17,7 +17,7 @@ class orderFactory extends Factory
     public function definition()
     {
         return [
-            'id_users'=>rand(1,10),
+            'id_users'=> fake()->numberBetween(1, 10),
         ];
     }
 }

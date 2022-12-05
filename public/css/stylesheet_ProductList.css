@@ -30,10 +30,9 @@ body{
     margin-right: auto;
     margin-top: 1%;
     margin-bottom: 1%;
-    width: 40%;
     border-radius: 18px;
-    max-width: 50%;
-    height: 50%;
+    height: 600px;
+    width: 600px;
 }
 
 
@@ -44,6 +43,9 @@ h2{
 }
 
 .myButton{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     padding-right: 75px;
     padding-left: 75px;
 }
@@ -56,32 +58,12 @@ h2{
     flex-direction: row;
     flex-wrap: nowrap;
 }
-#Casque_VR1{
-    max-width: 50%;
-    height: auto;
-}
-#CASQUE_VR2{
-    max-width: 60%;
-    height: auto;
-}
 #carouselPromo{
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
     height: 550px;
     width: 1250px;
-}
-
-#VR1{
-    margin-top: 1%;
-    margin-left: 20%;
-}
-#VR2{
-    margin-right: 20%;
-}
-
-#Vr{
-    margin-top: 3%;
 }
 .myButton{
     margin-bottom: 2%;
