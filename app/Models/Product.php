@@ -12,7 +12,7 @@ class Product extends Model
 
 //    protected $guarded = [];
 
-//    protected $fillable = ['id_category'];
+    protected $fillable = ['name', 'price', 'quantity', 'desciption', 'image', 'id_category'];
 
     public function category () {
         return $this->belongsTo(category::class,'id_category');
@@ -21,5 +21,10 @@ class Product extends Model
     public function order () {
         return $this->belongsToMany(order::class, 'order_products', 'id_products', 'id_orders');
 }
+
+    public function cart () {
+        return $this->belongsToMany(Cart::class, 'cart_products', 'id_products', 'id_carts')
+            ->withPivot(['quantity']);
+    }
 
 }

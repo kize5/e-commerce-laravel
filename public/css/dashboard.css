@@ -3,9 +3,13 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 15vh;
+    height: 35vh;
 
 }
+.container{
+    margin-top: 25vh;
+}
+
 
 .returnDash {
     display: flex;
@@ -15,10 +19,10 @@
 }
 
 .table {
-    margin-top: 165vh;
-    margin-bottom: 10vh;
-}
 
+    margin-top: 35vh;
+    width: 95%;
+}
 
 
 .addbtn {
@@ -38,8 +42,8 @@
 }
 
 .table_read {
-    margin-top: 200vh;
-    width: 80%;
+    margin-top: 70vh;
+    width: 85%;
 }
 
 .cancel_create {
@@ -51,3 +55,9 @@
 .myButton2 {
     margin-left: 55px;
 }
+
+.read_tableau {
+    display: flex;
+    justify-content: center;
+}
+

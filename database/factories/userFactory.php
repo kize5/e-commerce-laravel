@@ -2,15 +2,15 @@
 
 namespace Database\Factories;
 
-use App\Models\user;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\user>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
 class userFactory extends Factory
 {
-    protected $model = user::class;
+    protected $model = User::class;
     /**
      * Define the model's default state.
      *

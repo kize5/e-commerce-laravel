@@ -27,13 +27,14 @@
 
 body {
     background-image: url("../storage/image/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.all_box {
-    height: 81vh;
-}
 
-/***********Cart Part.***********/
+/***********cart Part.***********/
 h1 {
     color: var(--LightGreyPlus);
     font-size: 4rem;
@@ -42,7 +43,7 @@ h1 {
 }
 
 #CartProducts, #CartBuyPart {
-    background: var(--LightGrey);
+    /*background: var(--LightGrey);*/
     margin: 50px 25%;
 }
 
@@ -52,8 +53,10 @@ h1 {
 }
 
 #CartProducts, .CartProductCard, #CartBuyPart {
-    border: 2px solid var(--Color1);
-    border-radius: 20px;
+    border-radius: 50px;
+    border: 3px solid var(--Color2);
+    box-shadow: 6px 6px 3px var(--Color2);
+    backdrop-filter: blur(5px);
 }
 
 
@@ -133,6 +136,7 @@ h1 {
 
 #CartFormBuy {
     display: flex;
+    justify-content: center;
 }
 
 #CartDiscountCode {
@@ -163,10 +167,17 @@ h1 {
 }
 
 #CartFormBuy #CartPrice {
-    padding-top: 10px;
-    height: 36px;
+    /*padding-top: 10px;*/
+    /*height: 36px;*/
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    width: 10%;
     font-size: 1.5em;
-    color: var(--Color2);
+    color: var(--LightGrey);
+    border-radius: 7.5px;
+    border: 2px solid var(--LightGreyPlus);
+    background: var(--Color1);
 }
 
 #CartBuyButton {

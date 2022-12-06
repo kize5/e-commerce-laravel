@@ -7,9 +7,9 @@
     <div class="dash_container_button">
         {{$products->links()}}
         <table class="table table-dark table_read"
-               style="display:flex; flex-direction:column;">
+               style="display:flex; flex-direction:column; align-content: center;">
             <thead>
-            <tr>
+            <tr >
                 <th scope="col">ID</th>
                 <th scope="col">Créer le</th>
                 <th scope="col">Mise à jour le</th>

@@ -5,12 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class user_adress extends Model
+class cart_product extends Model
 {
     use HasFactory;
 
-    public function user ()
-    {
-        return $this->belongsTo(User::class, 'id');
-    }
 }

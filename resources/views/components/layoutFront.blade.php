@@ -56,6 +56,9 @@
         © 2022 Copyright: Îlot 2 !
     </div>
     <!-- Copyright -->
+    <div class="text-right p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <a href="{{url('backoffice')}}">Dashboard</a>
+    </div>
 </footer>
 
 </body>

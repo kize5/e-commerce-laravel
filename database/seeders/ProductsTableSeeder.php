@@ -59,7 +59,7 @@ class ProductsTableSeeder extends Seeder
             'price' => '850',
             'quantity' => '1000',
             'description' => 'Le top du top des casques de réalité virtuelle pour un prix très petit',
-            'image' => 'https://lisbonne-idee.com/upload4mail/magnolia-portugal/op_14469_experiencia-em-lisboa-portugal-por-simone-68818959579123ff8acad97d62959a19.jpg',
+            'image' => 'https://www.journaldugeek.com/content/uploads/2022/11/metaquest2.jpg',
             'id_category' => '2',
         ]);
 
@@ -71,8 +71,6 @@ class ProductsTableSeeder extends Seeder
             'image' => 'https://www.ccl-live.fr/wp-content/uploads/2017/05/Samsung-New-Gear-VR-1.jpg',
             'id_category' => '2',
         ]);
-
-
 
     }
 }
