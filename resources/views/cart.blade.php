@@ -4,21 +4,23 @@
     <div class="all_box">
         <h1>C A R T</h1>
         <section id="CartProducts">
-
             {{--Exemple Carte Produit (START)--}}
+
+
+                @foreach($cart->products as $product)
             <div class="CartProductCard">
                 <div class="CartAlignPhoto">
                     <a href=""> {{--URL Produit--}}
-                        <img src="../storage/image/VR_Mask.jpeg"
+                        <img src="{{$product->image}}"
                              alt="Image d'une personne portant un masque de VR 'eTravel'" !>
                     </a>
                     <div class="CartNamePrice">
                         <h2 class="CartProductName">
-                            Product Name
+                            {{$product->name}}
                         </h2>
                         <div class="CartProductLeftSide">
                             <p>
-                                499.99 $
+                                {{$product->price}} $
                             </p>
                             <div id="CartNbItems">
                                 <button
@@ -26,7 +28,7 @@
                                         type="button">-
                                 </button>
                                 <p>
-                                    3
+                                    {{$product->pivot->quantity}}
                                 </p>
                                 <button
                                         id="CartPlusButton"
@@ -37,6 +39,9 @@
                     </div>
                 </div>
             </div>
+
+                @endforeach
+{{--            @endforeach--}}
             {{--Exemple Carte Produit (END)--}}
 
         </section>
@@ -59,9 +64,7 @@
                     <p id="CartAlertDiscount">
                         /!\ "PROMO" code valide -25% /!\
                     </p>
-                    <p id="CartPrice">
-                        1499.97 $
-                    </p>
+                    <p id="CartPrice">{{$totals}} $</p>
                     <button
                             class="CartButton"
                             id="CartBuyButton"
@@ -71,4 +74,6 @@
             </div>
         </section>
     </div>
+
+
 @endsection

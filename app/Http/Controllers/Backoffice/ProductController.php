@@ -22,9 +22,9 @@ class ProductController extends BackofficeController
             $product = new Product($request->post());
             $product->save();
 
-            $products = Product::query()
-                ->orderBy("id")
-                ->paginate(25);
+//            $products = Product::query()
+//                ->orderBy("id")
+//                ->paginate(25);
 
             return redirect(route('backoffice.product.productList'));
         }

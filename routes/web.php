@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backoffice\FormController;
 use App\Http\Controllers\BackofficeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -23,7 +24,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/product', [ProductController::class, 'all_product'])->name('all_product');
 Route::get('/product/{id}', [ProductController::class, 'id_produit'])->name('id_product');
-Route::get('/cart', [CartController::class, 'panier'])->name('panier');
+Route::get('/cart', [CartController::class, 'panierget'])->name('panierget');
+Route::post('/cart', [CartController::class, 'panier'])->name('panier');
 
 Route::get('test', [TestController::class, 'test'])->name('test');
 
@@ -41,4 +43,6 @@ Route::prefix('backoffice')
         Route::post('product/update/{id}', [\App\Http\Controllers\Backoffice\ProductController::class, 'updatesave'])->name('backoffice.product.updatesave');
 
         Route::get('product/delete/{id}', [\App\Http\Controllers\Backoffice\ProductController::class, 'delete'])->name('backoffice.product.delete');
+        Route::get('form',[FormController::class, 'form'])->name('backoffice.test.form');
+        Route::post('form',[FormController::class, 'formpost'])->name('backoffice.test.form');
     });

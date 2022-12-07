@@ -82,3 +82,10 @@
 .logo-navbar {
     border-radius: 25px;
 }
+
+/* ------------css footer --------------*/
+
+footer{
+    display: flex;
+    justify-content: center;
+}
