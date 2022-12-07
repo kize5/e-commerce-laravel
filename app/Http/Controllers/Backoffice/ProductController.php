@@ -16,6 +16,14 @@ class ProductController extends BackofficeController
         return view("back/dashboardProduct", ["products" => $products]);
     }
 
+    public function read()
+    {
+        $products = Product::query()
+            ->orderBy("id")
+            ->paginate(25);
+        return view("back/dashboardProductRead", ["products" => $products]);
+    }
+
     public function create(Request $request)
     {
         if ($request->isMethod('post')) {
