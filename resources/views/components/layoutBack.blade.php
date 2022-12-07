@@ -14,17 +14,15 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{url('/') }}">Home</a>
+    <a class="navbar-brand" href="{{route('home') }}">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{url('backoffice')
-            }}">Dashboard<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="{{url('backoffice/product') }}">Product</a>
-            <a class="nav-item nav-link" href="{{url('backoffice/form')
-            }}">Sign Up</a>
+            <a class="nav-item nav-link active" href="{{route('backoffice.dashboard.dashboard') }}">Dashboard<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{{route('backoffice.product.productList') }}">Product</a>
+            <a class="nav-item nav-link" href="{{route('backoffice.test.form')}}">Sign Up</a>
         </div>
     </div>
 </nav>

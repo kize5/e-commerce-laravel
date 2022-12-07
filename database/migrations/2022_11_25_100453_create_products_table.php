@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('name');
             $table->unsignedBigInteger('price');
             $table->unsignedMediumInteger('quantity');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('image');
             $table->foreignId('id_category')->nullable()->constrained('categories');
         });

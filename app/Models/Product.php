@@ -10,23 +10,21 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+//    protected $guarded = [];
 
-    protected $fillable = [
-        'name',
-        'price',
-        'quantity',
-        'description',
-        'image',
-        'id_category'
-    ];
+    protected $fillable = ['name', 'price', 'quantity', 'desciption', 'image', 'id_category'];
 
     public function category () {
-        return $this->belongsTo(category::class,'id_category');
+        return $this->belongsTo(Category::class,'id_category');
     }
 
     public function order () {
-        return $this->belongsToMany(order::class, 'order_products', 'id_products', 'id_orders');
+        return $this->belongsToMany(Order::class, 'order_products', 'id_products', 'id_orders');
 }
+
+    public function cart () {
+        return $this->belongsToMany(Cart::class, 'cart_products', 'id_products', 'id_carts')
+            ->withPivot(['quantity']);
+    }
 
 }

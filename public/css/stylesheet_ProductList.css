@@ -1,26 +1,39 @@
-body{
-    background-color: #60CCEC;
+body {
+    background-image: url("../storage/image/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-image: url("../image/background.jpg");
-    background-repeat: no-repeat;
 }
-.Voyage{
-    border-radius: 35px;
-    border: thick double #FB7A25;
-    align-items: center;
+
+.box_list_front {
     display: flex;
+    align-items: center;
     flex-direction: column;
+}
+
+.Voyage{
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    border: 3px solid var(--Color2);
+    box-shadow: 10px 10px 5px var(--Color2);
+    backdrop-filter: blur(5px);
+    max-width: 90vw;
+    margin-bottom: 20px;
 }
 #Voyage1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 20px;
-    border: groove #E75C38;
-    padding-left:15vh;
-    padding-right: 15vh;
-    backdrop-filter: blur(2px);
-    margin-top: 1%;
-    margin-bottom: 1%;
+    padding-left:10vh;
+    padding-right: 10vh;
+    margin: 10px;
+    max-width: 40%;
+    border: 3px solid var(--Color2);
+    backdrop-filter: blur(5px);
 }
 
 
@@ -31,11 +44,9 @@ body{
     margin-top: 1%;
     margin-bottom: 1%;
     border-radius: 18px;
-    height: 600px;
-    width: 600px;
+    height: 250px;
+    width: 250px;
 }
-
-
 
 h2{
     text-align: center;
@@ -52,7 +63,7 @@ h2{
 .VR{
     backdrop-filter: blur(2px);
     border-radius: 50px;
-    border: thick double #FB7A25;
+    border: var(--Color2);
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -73,6 +84,14 @@ h2{
 
 /*________________________________________________*/
 
+#hi_list_prod {
+    margin: 3vh;
+    background-color: var(--Color3);
+    border-radius: 50px;
+    border: 3px solid var(--Color2);
+    box-shadow: 10px 10px 5px var(--Color2);
+    padding: 1%;
+}
 
 
 * {
@@ -80,6 +99,7 @@ h2{
     padding: 0;
     box-sizing: border-box;
 }
+
 .navbar {
     display: flex;
     box-shadow: 0 0 2px 0 grey;
@@ -180,6 +200,10 @@ h2{
 
 .menu-icon{
     display:none;
+}
+
+#desc_list_prod {
+    font-size: 1.2rem;
 }
 /*__________________________________________________*/
 #searchbar{

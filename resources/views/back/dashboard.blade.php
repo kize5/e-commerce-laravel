@@ -1,17 +1,10 @@
-@php
-    use App\Http\Controllers\Backoffice\ProductController;
-    use App\Models\Product;
-@endphp
 
 @extends('components.layoutBack')
 
 @section('content')
-    <style>.myButton {
-            box-shadow: 5px 8px 9px -3px;
-            font-size: 12px;
-            padding: 10px 25px;
-        }</style>
-    <h1>Bienvenue</h1>
+<div class="containAllDashboard">
+<h1>DashBoard</h1>
 
-
+<img class="fakeImg" src="https://support.medit.com/hc/article_attachments/360093367052/2.4_clinic_dashboard.png" alt="fake">
+</div>
 @endsection

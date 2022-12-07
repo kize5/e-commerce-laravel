@@ -2,29 +2,22 @@
 @extends('components.layoutFront')
 @section('content')
 
-{{--    -------------- one to one with if ------------ <br>--}}
+    -------------- one to one with if ------------ <br>
 
-{{--    @foreach($users as $user)--}}
-{{--       // {{$user->first_name}}  {{$user->last_name}} : <br>--}}
-{{--       @if(isset($user->order->id) )--}}
-{{--           @foreach($user->order as $order)--}}
-{{--               {{dd($user->order->id)}}--}}
-{{--               @if(($user->id = $user->order->id))--}}
-{{--                   {{$user->order->id}} <br>--}}
-{{--               @endif--}}
-{{--           @endforeach--}}
-{{--       @endif--}}
-{{--    @endforeach--}}
+
+
 
     <br>
     -------------- many to many ------------ <br>
     <br>
     @foreach ($products as $product)
+{{--        {{dd($product->pivot)}}--}}
         @foreach($product->order as $order)
             {{$order->id_users}}
         @endforeach
     @endforeach
 
+    <br>
     -------------- many to many ------------ <br>
 
     @foreach($orders as $order)

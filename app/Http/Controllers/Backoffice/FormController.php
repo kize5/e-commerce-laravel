@@ -30,11 +30,10 @@ class FormController extends BackofficeController
 //    }
 
     public function form(){
-    return view('back.form');
+        return view('back.form');
     }
 
-//    public function formpost(){
-//    return
-//    }
+    public function formpost(){
 
+    }
 }
