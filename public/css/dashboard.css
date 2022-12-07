@@ -61,3 +61,15 @@
     justify-content: center;
 }
 
+.fakeImg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.containAllDashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

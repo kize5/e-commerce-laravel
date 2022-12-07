@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
-use App\Models\category;
-use App\Models\order;
+use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
-use App\Models\user_adress;
+use App\Models\User_adress;
 
 class TestController extends Controller
 {
     public function test () {
         $users = User::all();
-        $adresses = user_adress::all();
+        $adresses = User_adress::all();
 
-        $categories = category::all();
+        $categories = Category::all();
         $products = Product::all();
 
-        $orders = order::all();
+        $orders = Order::all();
         $carts = Cart::query()->where(['id_users'=>5])->get();
 
         return view('test', [

@@ -11,12 +11,12 @@ class User extends Model
 
     public function order()
     {
-        return $this->hasOne(order::class, 'id_users', 'id');
+        return $this->hasOne(Order::class, 'id_users', 'id');
     }
 
     public function user_adress()
     {
-        return $this->hasOne(user_adress::class, 'id_users', 'id');
+        return $this->hasOne(User_adress::class, 'id_users', 'id');
     }
 
     public function current_cart()

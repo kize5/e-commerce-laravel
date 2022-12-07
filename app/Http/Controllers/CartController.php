@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Cart;
-use App\Models\cart_product;
+use App\Models\Cart_product;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -18,7 +17,7 @@ class CartController extends Controller
             $id = $request->input('id');
             $qty = $request->input('qty');
 
-            $cart_prod = new cart_product();
+            $cart_prod = new Cart_product();
             $cart_prod->id_carts = 5;
             $cart_prod->id_products = $id;
             $cart_prod->quantity = $qty;

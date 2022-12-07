@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Cart>
  */
-class cartFactory extends Factory
+class CartFactory extends Factory
 {
     /**
      * Define the model's default state.

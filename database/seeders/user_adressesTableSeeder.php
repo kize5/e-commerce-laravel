@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\user_adress;
-use Database\Factories\user_adressFactory;
+use App\Models\User_adress;
+use Database\Factories\User_adressFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,6 +17,6 @@ class user_adressesTableSeeder extends Seeder
      */
     public function run()
     {
-        user_adress::factory()->count(10)->create();
+        User_adress::factory()->count(10)->create();
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backoffice\FormController;
 use App\Http\Controllers\BackofficeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -42,5 +43,6 @@ Route::prefix('backoffice')
         Route::post('product/update/{id}', [\App\Http\Controllers\Backoffice\ProductController::class, 'updatesave'])->name('backoffice.product.updatesave');
 
         Route::get('product/delete/{id}', [\App\Http\Controllers\Backoffice\ProductController::class, 'delete'])->name('backoffice.product.delete');
-        Route::get('form',[TestController::class, 'form'])->name('backoffice.test.form');
+        Route::get('form',[FormController::class, 'form'])->name('backoffice.test.form');
+        Route::post('form',[FormController::class, 'formpost'])->name('backoffice.test.form');
     });

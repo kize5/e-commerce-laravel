@@ -2,28 +2,9 @@
 @extends('components.layoutBack')
 
 @section('content')
-
+<div class="containAllDashboard">
 <h1>DashBoard</h1>
 
-<div class="container">
-
-    <div class="dash_container_button">
-        <a href="{{ url('backoffice/product/create') }}">
-        <button class="myButton" >Ajouter produits</button>
-        </a>
-
-        <a href="{{ url('backoffice/product/read') }}">
-            <button class="myButton" >Afficher produits</button>
-        </a>
-
-        <a href="{{ url('backoffice/product/update') }}">
-            <button class="myButton" >Mise à jour produits</button>
-        </a>
-
-        <a href="{{ url('backoffice/product/delete') }}">
-            <button class="myButton" >Supprimer produits</button>
-        </a>
-    </div>
+<img class="fakeImg" src="https://support.medit.com/hc/article_attachments/360093367052/2.4_clinic_dashboard.png" alt="fake">
 </div>
-
 @endsection
