@@ -9,42 +9,36 @@ use Illuminate\Http\Request;
 class ProductController extends BackofficeController
 {
 
-    public function productList () {
-        $products = Product::query()
-            ->orderBy("id")
-            ->paginate(25);
+    public function productList()
+    {
+        $products = Product::all();
 
         return view("back/dashboardProduct", ["products" => $products]);
     }
 
-    public function create(Request $request) {
+    public function create(Request $request)
+    {
         if ($request->isMethod('post')) {
             $product = new Product($request->post());
 
             $product->save();
 
             $products = Product::query()
-                ->orderBy("id")
-                ->paginate(25);
+                ->orderBy("id");
+
 
             return redirect(route('backoffice.product.productList'));
         }
         return view("back/dashboardProductCreate");
     }
 
-
-    public function read () {
-        $products = Product::query()
-            ->orderBy("id")
-            ->paginate(25);
-        return view("back/dashboardProductRead", ["products" => $products]);
-    }
-
-    public function update (Request $request, $id) {
+//Get
+    public function update(Request $request, $id)
+    {
         $product = Product::query()
             ->where([
                 'id' => $id
-                ])
+            ])
             ->first();
 
         if ($request->isMethod('post')) {
@@ -58,24 +52,25 @@ class ProductController extends BackofficeController
             return redirect(route('backoffice.product.productList'));
 
         }
-        return view("back/dashboardProductUpdate", ['product'=>$product]);
+        return view("back/dashboardProductUpdate", ['product' => $product]);
     }
 
-    public function updatesave (Request $request, $id ) {
+    //Post
+    public function updatesave(Request $request, $id)
+    {
 
-            $product = Product::query()
-                ->where([
-                    'id' => $id
-                ])
-                ->first();
-            $product->fill($request->post());
-            $product->save();
-            return redirect(route('backoffice.product.productList'));
-
-
+        $product = Product::query()
+            ->where([
+                'id' => $id
+            ])
+            ->first();
+        $product->fill($request->post());
+        $product->save();
+        return redirect(route('backoffice.product.productList'));
     }
 
-    public function delete ($id) {
+    public function delete($id)
+    {
         Product::query()
             ->where([
                 'id' => $id

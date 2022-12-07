@@ -10,4 +10,6 @@ class HomeController extends Controller
 
         return view('homepage',['css' => '../css/homepage.css', 'title' => 'Homepage']);
     }
+
+
 }
