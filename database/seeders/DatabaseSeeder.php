@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             user_adressesTableSeeder::class,
             OrdersTableSeeder::class,
-            order_productsTableSeeder::class,
+            Order_productsTableSeeder::class,
             cartsTableSeeder::class,
             cart_productsTableSeeder::class,
         ]);

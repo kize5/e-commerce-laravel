@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Backoffice;
 
 use App\Http\Controllers\Controller;
-use App\Models\category;
-use App\Models\order;
-use App\Models\Product;
-use App\Models\user;
-use App\Models\user_adress;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Validation\Rules\Password;
 
 class FormController extends BackofficeController
 {
@@ -29,11 +28,32 @@ class FormController extends BackofficeController
 //        ]);
 //    }
 
-    public function form(){
+    public function create()
+    {
         return view('back.form');
     }
 
-    public function formpost(){
+    public function store(Request $request)
+    {
+
+        $validated=$request->validate([
+            'first_name' => ['required', 'max:20'],
+            'last_name' => ['required', 'max:20'],
+            'email' => ['required', 'unique:users,email', 'email:rfc', 'email:dns'],
+            'password' => ['required', Password::min(8)
+                ->mixedCase()->symbols()->uncompromised()],
+        ]);
+
+
+        User::create($validated);
+        return redirect(route('backoffice.test.create'))->with('sucess', 'Enregistrement validé');
 
     }
+
+
+    /**
+     * authentificated user's password (current_password
+     *'password' => 'current_password:api'
+     * return redirect('register')->withErrors($validator, 'login');
+     */
 }

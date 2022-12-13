@@ -27,6 +27,7 @@ class ProductController extends BackofficeController
     public function create(Request $request)
     {
         if ($request->isMethod('post')) {
+
             $product = new Product($request->post());
 
             $product->save();

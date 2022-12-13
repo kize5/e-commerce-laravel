@@ -23,7 +23,8 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="{{route('backoffice.dashboard.dashboard') }}">Dashboard<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="{{route('backoffice.product.productList') }}">Product</a>
-            <a class="nav-item nav-link" href="{{route('backoffice.test.form')}}">Sign Up</a>
+            <a class="nav-item nav-link" href="{{route('backoffice.test.create')
+            }}">Sign Up</a>
         </div>
     </div>
 </nav>

@@ -6,6 +6,8 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +30,7 @@ Route::post('/cart', [CartController::class, 'panier'])->name('panier');
 Route::get('test', [FormController::class, 'test'])->name('test');
 
 
+
 Route::prefix('backoffice')
     ->group(function () {
         Route::get(null, [\App\Http\Controllers\Backoffice\DashboardController::class, 'dashboard'])->name('backoffice.dashboard.dashboard');
@@ -42,6 +45,27 @@ Route::prefix('backoffice')
         Route::post('product/update/{id}', [\App\Http\Controllers\Backoffice\ProductController::class, 'updatesave'])->name('backoffice.product.updatesave');
 
         Route::get('product/delete/{id}', [\App\Http\Controllers\Backoffice\ProductController::class, 'delete'])->name('backoffice.product.delete');
-        Route::get('form',[FormController::class, 'form'])->name('backoffice.test.form');
-        Route::post('form',[FormController::class, 'formpost'])->name('backoffice.test.form');
+
+        Route::get('form',[FormController::class, 'create'])->name('backoffice.test.create');
+        Route::post('form',[FormController::class, 'store'])->name('backoffice.test.store');
     });
+
+/* Breeze */
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+Auth::routes();
+
+
