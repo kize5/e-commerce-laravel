@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\exuser;
 use App\Models\User_adress;
 use Database\Factories\User_adressFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;

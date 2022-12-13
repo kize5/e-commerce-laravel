@@ -25,9 +25,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 82vh;
     overflow: hidden;
-    border: 5px solid;
     box-sizing: border-box;
 }
 

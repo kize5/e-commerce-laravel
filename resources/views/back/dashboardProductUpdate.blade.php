@@ -1,9 +1,7 @@
-@extends('components.layoutBack')
-
-@section('content')
-
+<x-app-layout>
+    <div class="h1Crud">
     <h1>Mise à jour d'un produit</h1>
-
+    </div>
     <div class="form_create">
         <form method="post" action="{{route('backoffice.product.updatesave', [$product->id])}}">
             @csrf
@@ -49,9 +47,9 @@
     </div>
 
     <div class="cancel_create">
-        <a href="{{route('backoffice.dashboard.dashboard')}}">
+        <a href="{{route('backoffice.product.productList')}}">
             <button class="myButton">Annuler</button>
         </a>
     </div>
 
-@endsection
+    </x-app-layout>

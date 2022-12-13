@@ -6,12 +6,11 @@
         <section id="CartProducts">
             {{--Exemple Carte Produit (START)--}}
 
-
                 @foreach($cart->products as $product)
             <div class="CartProductCard">
                 <div class="CartAlignPhoto">
-                    <a href=""> {{--URL Produit--}}
-                        <img src="{{$product->image}}"
+                    <a href="{{route('id_product', ['id' => $product->id])}}"> {{--URL Produit--}}
+                        <img id="imgCart" src="{{$product->image}}"
                              alt="Image d'une personne portant un masque de VR 'eTravel'" !>
                     </a>
                     <div class="CartNamePrice">
@@ -27,9 +26,11 @@
                                         id="CartSubtractButton"
                                         type="button">-
                                 </button>
-                                <p>
+                                <div class="qtyNumberCart">
+
                                     {{$product->pivot->quantity}}
-                                </p>
+
+                                </div>
                                 <button
                                         id="CartPlusButton"
                                         type="button">+
@@ -48,7 +49,8 @@
 
         <section id="CartBuyPart">
             <div>
-                <form id="CartFormBuy">
+                <form id="CartFormBuy" method="post" action="{{route('thanks')}}">
+                    @csrf
                     <label for="CartDiscountCode"></label>
                     <input
                             type="text"
@@ -65,11 +67,10 @@
                         /!\ "PROMO" code valide -25% /!\
                     </p>
                     <p id="CartPrice">{{$totals}} $</p>
-                    <button
-                            class="CartButton"
-                            id="CartBuyButton"
-                            type="button">BUY
-                    </button>
+
+                    <input type="hidden" name="id" value="{{$cart->id}}">
+                    <input class="myButton" type="submit" value="Buy"/>
+{{--                    <a href="{{route('thanks')}}" class="CartButton" id="CartBuyButton" type="button">BUY</a>--}}
                 </form>
             </div>
         </section>

@@ -1,9 +1,7 @@
-@extends('components.layoutBack')
-
-@section('content')
-
+<x-app-layout>
+    <div class="h1Crud">
     <h1>DashBoard Produits</h1>
-
+    </div>
     <div class="dash_container_button">
         {{$products->links()}}
         <table class="table table-dark table_read"
@@ -38,6 +36,6 @@
         </table>
     </div>
 
-@endsection
+    </x-app-layout>
 
 

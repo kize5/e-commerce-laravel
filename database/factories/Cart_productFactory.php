@@ -18,7 +18,6 @@ class Cart_productFactory extends Factory
     {
         return [
 
-
         ];
     }
 }

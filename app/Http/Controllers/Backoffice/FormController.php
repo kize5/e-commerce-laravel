@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\category;
 use App\Models\order;
 use App\Models\Product;
-use App\Models\user;
+use App\Models\exuser;
 use App\Models\user_adress;
 
 class FormController extends BackofficeController

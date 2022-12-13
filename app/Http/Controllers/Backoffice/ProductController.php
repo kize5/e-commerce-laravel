@@ -81,6 +81,6 @@ class ProductController extends BackofficeController
             ])
             ->delete();
 
-        return redirect("backoffice/product");
+        return redirect(route("dashboard"));
     }
 }

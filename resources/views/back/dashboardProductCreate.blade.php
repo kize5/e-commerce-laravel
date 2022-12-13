@@ -1,8 +1,7 @@
-@extends('components.layoutBack')
-
-@section('content')
+<x-app-layout>
+    <div class="h1Crud">
     <h1>Créer un nouveau produit</h1>
-
+    </div>
 <div class="contain_all_create">
     <div class="form_create">
         <form class="form_create_style" method="post" action="">
@@ -34,9 +33,9 @@
 
     </div>
     <div class="cancel_create">
-    <a href="{{route('backoffice.dashboard.dashboard')}}" >
+    <a href="{{route('backoffice.product.productList')}}" >
         <button class="myButton">Annuler</button></a>
     </div>
 </div>
-@endsection
+    </x-app-layout>
 

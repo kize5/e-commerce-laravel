@@ -6,13 +6,13 @@ use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
-use App\Models\User;
+use App\Models\exuser;
 use App\Models\User_adress;
 
 class TestController extends Controller
 {
     public function test () {
-        $users = User::all();
+        $users = exuser::all();
         $adresses = User_adress::all();
 
         $categories = Category::all();

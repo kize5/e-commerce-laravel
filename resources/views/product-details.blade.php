@@ -12,7 +12,7 @@
                     <form class="form_id" method="post" action="{{route('panier')}}">
                         @csrf
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                        <p class="text_id_form"><strong>Prix : {{$product->price}} </strong></p> <br>
+                        <p class="text_id_form"><strong>Prix : {{$product->price}} $</strong></p> <br>
                         <p class="text_di_form"> TVA incluse (si applicable), plus frais de livraison</p> <br>
                         <input type="hidden" name="id" value="{{$product->id}}"/>
                         <input type="hidden" id="price" name="price" value="{{$product->price}}">

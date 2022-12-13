@@ -88,4 +88,11 @@
 footer{
     display: flex;
     justify-content: center;
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*bottom: 1px;*/
+}
+
+.collapse {
+    visibility: visible;
 }

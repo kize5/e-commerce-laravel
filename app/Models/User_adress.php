@@ -11,6 +11,6 @@ class User_adress extends Model
 
     public function user ()
     {
-        return $this->belongsTo(User::class, 'id');
+        return $this->belongsTo(exuser::class, 'id');
     }
 }

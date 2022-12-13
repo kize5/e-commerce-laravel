@@ -7,7 +7,7 @@
 
 }
 .container{
-    margin-top: 25vh;
+    /*margin-top: 25vh;*/
 }
 
 
@@ -19,11 +19,10 @@
 }
 
 .table {
-
-    margin-top: 35vh;
+    margin-top: 20vh;
     width: 95%;
+    border-radius: 20px;
 }
-
 
 .addbtn {
     margin-bottom: 20px;
@@ -72,4 +71,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+a.inline-flex {
+    font-size: 2rem;
+}
+
+.h1Crud {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
 }

@@ -2,21 +2,35 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class UserExlaravel extends Authenticatable
+class exuser extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    protected $table = 'users';
+    public function order()
+    {
+        return $this->hasOne(Order::class, 'id_users', 'id');
+    }
+
+    public function user_adress()
+    {
+        return $this->hasOne(User_adress::class, 'id_users', 'id');
+    }
+
+    public function current_cart()
+    {
+        return $this
+            ->hasOne(Cart::class, 'id_users')
+            ->orderBy('created_at', 'desc')
+            ->limit(1);
+    }
+
     protected $fillable = [
         'name',
         'email',
@@ -41,4 +55,5 @@ class UserExlaravel extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }
