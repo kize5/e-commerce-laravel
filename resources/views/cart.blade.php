@@ -4,30 +4,33 @@
     <div class="all_box">
         <h1>C A R T</h1>
         <section id="CartProducts">
-
             {{--Exemple Carte Produit (START)--}}
+
+                @foreach($cart->products as $product)
             <div class="CartProductCard">
                 <div class="CartAlignPhoto">
-                    <a href=""> {{--URL Produit--}}
-                        <img src="../storage/image/VR_Mask.jpeg"
+                    <a href="{{route('id_product', ['id' => $product->id])}}"> {{--URL Produit--}}
+                        <img id="imgCart" src="{{$product->image}}"
                              alt="Image d'une personne portant un masque de VR 'eTravel'" !>
                     </a>
                     <div class="CartNamePrice">
                         <h2 class="CartProductName">
-                            Product Name
+                            {{$product->name}}
                         </h2>
                         <div class="CartProductLeftSide">
                             <p>
-                                499.99 $
+                                {{$product->price}} $
                             </p>
                             <div id="CartNbItems">
                                 <button
                                         id="CartSubtractButton"
                                         type="button">-
                                 </button>
-                                <p>
-                                    3
-                                </p>
+                                <div class="qtyNumberCart">
+
+                                    {{$product->pivot->quantity}}
+
+                                </div>
                                 <button
                                         id="CartPlusButton"
                                         type="button">+
@@ -37,13 +40,17 @@
                     </div>
                 </div>
             </div>
+
+                @endforeach
+{{--            @endforeach--}}
             {{--Exemple Carte Produit (END)--}}
 
         </section>
 
         <section id="CartBuyPart">
             <div>
-                <form id="CartFormBuy">
+                <form id="CartFormBuy" method="post" action="{{route('thanks')}}">
+                    @csrf
                     <label for="CartDiscountCode"></label>
                     <input
                             type="text"
@@ -59,16 +66,15 @@
                     <p id="CartAlertDiscount">
                         /!\ "PROMO" code valide -25% /!\
                     </p>
-                    <p id="CartPrice">
-                        1499.97 $
-                    </p>
-                    <button
-                            class="CartButton"
-                            id="CartBuyButton"
-                            type="button">BUY
-                    </button>
+                    <p id="CartPrice">{{$totals}} $</p>
+
+                    <input type="hidden" name="id" value="{{$cart->id}}">
+                    <input class="myButton" type="submit" value="Buy"/>
+{{--                    <a href="{{route('thanks')}}" class="CartButton" id="CartBuyButton" type="button">BUY</a>--}}
                 </form>
             </div>
         </section>
     </div>
+
+
 @endsection

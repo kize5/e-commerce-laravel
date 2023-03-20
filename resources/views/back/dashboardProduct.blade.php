@@ -3,18 +3,17 @@
     use App\Models\Product;
 @endphp
 
-@extends('components.layoutBack')
-
-@section('content')
+<x-app-layout>
     <style>.myButton {
             box-shadow: 5px 8px 9px -3px;
             font-size: 12px;
             padding: 10px 25px;
         }</style>
-    <h1>Liste produits</h1>
 
     <div class="container">
-
+        <div class="h1Crud">
+            <h1>Liste produits</h1>
+        </div>
         <a href="{{ action([ProductController::class, 'create']) }}">
             <button class="myButton addbtn">Ajouter produits</button>
         </a>
@@ -51,4 +50,4 @@
             </table>
         </div>
     </div>
-@endsection
+    </x-app-layout>

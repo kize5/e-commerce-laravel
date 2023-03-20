@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\category;
-use App\Models\order;
+use App\Models\Cart;
+use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
-use App\Models\user;
-use App\Models\user_adress;
-use Illuminate\Http\Request;
+use App\Models\exuser;
+use App\Models\User_adress;
 
 class TestController extends Controller
 {
     public function test () {
-        $users = user::all();
-        $adresses = user_adress::all();
+        $users = exuser::all();
+        $adresses = User_adress::all();
 
-        $categories = category::all();
+        $categories = Category::all();
         $products = Product::all();
 
-        $orders = order::all();
+        $orders = Order::all();
+        $carts = Cart::query()->where(['id_users'=>5])->get();
 
         return view('test', [
             'users'=>$users,
@@ -27,7 +28,8 @@ class TestController extends Controller
             'products'=>$products,
             'orders'=>$orders,
             'css'=>'../css/main.css',
-            'title'=>'test'
+            'title'=>'test',
+            'carts'=>$carts
         ]);
     }
 }

@@ -3,9 +3,13 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 15vh;
+    height: 35vh;
 
 }
+.container{
+    /*margin-top: 25vh;*/
+}
+
 
 .returnDash {
     display: flex;
@@ -15,11 +19,10 @@
 }
 
 .table {
-    margin-top: 165vh;
-    margin-bottom: 10vh;
+    margin-top: 20vh;
+    width: 95%;
+    border-radius: 20px;
 }
-
-
 
 .addbtn {
     margin-bottom: 20px;
@@ -38,8 +41,8 @@
 }
 
 .table_read {
-    margin-top: 200vh;
-    width: 80%;
+    margin-top: 70vh;
+    width: 85%;
 }
 
 .cancel_create {
@@ -50,4 +53,34 @@
 
 .myButton2 {
     margin-left: 55px;
+}
+
+.read_tableau {
+    display: flex;
+    justify-content: center;
+}
+
+.fakeImg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.containAllDashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.inline-flex {
+    font-size: 2rem;
+}
+
+.h1Crud {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
 }

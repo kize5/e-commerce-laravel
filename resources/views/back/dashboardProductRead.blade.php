@@ -1,15 +1,13 @@
-@extends('components.layoutBack')
-
-@section('content')
-
+<x-app-layout>
+    <div class="h1Crud">
     <h1>DashBoard Produits</h1>
-
+    </div>
     <div class="dash_container_button">
         {{$products->links()}}
         <table class="table table-dark table_read"
-               style="display:flex; flex-direction:column;">
+               style="display:flex; flex-direction:column; align-content: center;">
             <thead>
-            <tr>
+            <tr >
                 <th scope="col">ID</th>
                 <th scope="col">Créer le</th>
                 <th scope="col">Mise à jour le</th>
@@ -38,6 +36,6 @@
         </table>
     </div>
 
-@endsection
+    </x-app-layout>
 
 

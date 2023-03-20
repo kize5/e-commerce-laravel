@@ -25,15 +25,20 @@
     text-decoration: none;
 }
 
+p {
+    margin-bottom: 0.01px;
+}
+
 body {
     background-image: url("../storage/image/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.all_box {
-    height: 81vh;
-}
 
-/***********Cart Part.***********/
+/***********cart Part.***********/
 h1 {
     color: var(--LightGreyPlus);
     font-size: 4rem;
@@ -41,8 +46,19 @@ h1 {
     margin-top: 10px;
 }
 
+.all_box {
+    display: flex;
+    flex-direction: column;
+    min-height: 82vh;
+}
+
+.CartButton {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
 #CartProducts, #CartBuyPart {
-    background: var(--LightGrey);
+    /*background: var(--LightGrey);*/
     margin: 50px 25%;
 }
 
@@ -52,13 +68,16 @@ h1 {
 }
 
 #CartProducts, .CartProductCard, #CartBuyPart {
-    border: 2px solid var(--Color1);
-    border-radius: 20px;
+    border-radius: 50px;
+    border: 3px solid var(--Color2);
+    box-shadow: 6px 6px 3px var(--Color2);
+    backdrop-filter: blur(5px);
 }
 
 
 .CartAlignPhoto {
     display: flex;
+    justify-content: space-around;
 }
 
 .CartAlignPhoto img {
@@ -81,7 +100,7 @@ h1 {
 }
 
 .CartNamePrice * {
-    width:500px;
+    width:10vw;
     color: var(--Color2);
 }
 
@@ -95,6 +114,7 @@ h1 {
     border-radius: 10px;
     border: 2px solid var(--Color1);
     width: 82.5px;
+    height: 4vh;
 }
 
 #CartNbItems * {
@@ -104,6 +124,16 @@ h1 {
 #CartNbItems p {
     padding-left: 5px;
     width: 17.5px;
+}
+
+.qtyNumberCart {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+#imgCart {
+    width: 80%;
 }
 
 #CartSubtractButton {
@@ -133,6 +163,7 @@ h1 {
 
 #CartFormBuy {
     display: flex;
+    justify-content: center;
 }
 
 #CartDiscountCode {
@@ -163,10 +194,17 @@ h1 {
 }
 
 #CartFormBuy #CartPrice {
-    padding-top: 10px;
-    height: 36px;
+    /*padding-top: 10px;*/
+    /*height: 36px;*/
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    width: 10%;
     font-size: 1.5em;
-    color: var(--Color2);
+    color: var(--LightGrey);
+    border-radius: 7.5px;
+    border: 2px solid var(--LightGreyPlus);
+    background: var(--Color1);
 }
 
 #CartBuyButton {
