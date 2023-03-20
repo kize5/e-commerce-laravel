@@ -4,15 +4,9 @@
     {{--Navbar Accueil--}}
     <div class="contain_all">
         <div class="conteneur-nav">
-            <ul class="lst-nav">
-                <li class="myButton2"><a href="{{ url('/product') }}"
-                                         data-text="VR">VR</a></li>
-                <li class="myButton2 bnt-travel"><a href="{{ url
-        ('/product') }}"
-                                                    data-text="Voyage">Voyage</a></li>
-                <li class="myButton2"><a href="{{url('/product/{id}')}}"
-                                         data-text="Services">Services</a></li>
-            </ul>
+                <a href="{{ url('/product') }}" data-text="VR"><button class="myButton2">VR</button></a>
+            <a href="{{ url('/product') }}" data-text="Voyage"><button class="myButton2 bnt-travel">Voyage</button></a>
+            <a href="{{url('/product/{id}')}}" data-text="Services"><button class="myButton2">Services</button></a>
         </div>
     </div>
 

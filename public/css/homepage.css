@@ -81,40 +81,15 @@ position: absolute;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: 'Poppins', sans-serif;*/
 }
 
 
-.lst-nav {
-    position: relative;
-    top: 46px;
-}
-
-.lst-nav li {
-    list-style: none;
-    text-align: center;
-}
-
-.lst-nav li a {
-    color: white;
-    text-decoration: none;
-    font-size: 3em;
-    padding: 5px 20px;
-    display: inline-flex;
-    font-weight: 700;
-    transition: 0.5s;
-}
-
-/*.lst-nav:hover li a {*/
-/*    color: #0002;*/
-/*}*/
-
-.lst-nav li:hover a {
+.myButton2 :hover a {
     color: #ffffff;
 }
 
 
-.lst-nav li a:before {
+.myButton2 :before {
     content: '';
     position: absolute;
     top: 50%;
@@ -134,7 +109,7 @@ position: absolute;
     transition: letter-spacing 0.5s, left 0.5s;
 }
 
-.lst-nav li a:hover:before {
+.myButton2 :hover:before {
     content: attr(data-text);
     opacity: 1;
     left: 50%;
@@ -143,17 +118,17 @@ position: absolute;
     height: 1800px;
 }
 
-.lst-nav li:nth-child(6n+1) a:before {
+.myButton2:before {
     background: #3f5efb;
     opacity: 0.8;
 }
 
-.lst-nav li:nth-child(6n+2) a:before {
+.myButton2:before {
     background: #fc466b;
     opacity: 0.8;
 }
 
-.lst-nav li:nth-child(6n+3) a:before {
+.myButton2:before {
     background: #55efc4;
     opacity: 0.8;
 }
